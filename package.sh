@@ -8,7 +8,7 @@ cp target/x86_64-pc-windows-gnu/release/*.exe package
 
 export DLLS=`peldd package/*.exe -t --ignore-errors`
 for DLL in $DLLS
-    do cp "$GTK_INSTALL_PATH/bin/$DLL" package
+    do cp "$DLL" package
 done
 
 mkdir -p package/share/{themes,gtk-3.0}
