@@ -6,7 +6,7 @@ RUN useradd -ms /bin/bash rust
 ADD peldd /usr/bin/peldd
 ADD package.sh /usr/bin/package.sh
 
-RUN dnf install -y mingw64-gcc mingw64-freetype mingw64-cairo mingw64-harfbuzz mingw64-pango mingw64-poppler mingw64-gtk3 mingw64-winpthreads-static mingw64-glib2-static gcc boost zip
+RUN dnf install -y mingw64-gcc mingw64-freetype mingw64-cairo mingw64-harfbuzz mingw64-pango mingw64-poppler mingw64-gtk3 mingw64-winpthreads-static mingw64-glib2-static gcc boost zip && dnf clean all -y
 
 USER rust
 
