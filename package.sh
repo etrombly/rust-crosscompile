@@ -21,6 +21,7 @@ cat << EOF > package/share/gtk-3.0/settings.ini
 gtk-theme-name = Windows10
 gtk-font-name = Segoe UI 10
 gtk-xft-rgba = rgb
+gtk-xft-antialias = 1
 EOF
 
 mingw-strip package/*
