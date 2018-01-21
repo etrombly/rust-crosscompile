@@ -93,6 +93,3 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b shade(#e8e8e7, 0.89);
 @define-color wm_button_active_color_c shade(#e8e8e7, 0.9);
 @define-color content_view_bg #ffffff;
-
-@import url("gtk-contained.css");
-@import url("apps/gnome-terminal.css");
