@@ -32,7 +32,7 @@ CMD ["/usr/bin/package.sh"]
 #   2) Building the image:
 #       $ docker build . -t PROJECTNAME-build-image
 #   3) Creating a container with the source mounted the image (which kicks off the build):
-#       $ docker create -v `pwd`:/home/rustacean/src --name PROJECTNAME-build PROJECTNAME-build-image
+#       $ docker create -v `pwd`:/home/rust/src --name PROJECTNAME-build PROJECTNAME-build-image
 #   4) Each time you want to build the project, start the Docker container. 
 #      Add "-ai" to watch the build progress.
 #       $ docker start PROJECTNAME-build
