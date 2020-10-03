@@ -18,7 +18,7 @@ RUN . ~/.cargo/env && \
     rustup target add x86_64-pc-windows-gnu
 
 ADD cargo.config /home/rust/.cargo/config
-ADD Windows10 /home/rust/Windows10
+ADD Windows-10 /home/rust/Windows10
 
 ENV PKG_CONFIG_ALLOW_CROSS=1
 ENV PKG_CONFIG_PATH=/usr/x86_64-w64-mingw32/sys-root/mingw/lib/pkgconfig/
