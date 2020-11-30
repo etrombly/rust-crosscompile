@@ -10,11 +10,9 @@ RUN cmake .. -DCMAKE_BUILD_TYPE=Release
 RUN make
 
 FROM fedora:latest
-RUN useradd -ms /bin/bash rust
 COPY --from=0 /root/pe-util/build/peldd /usr/bin/peldd
 ADD package.sh /usr/bin/package.sh
 RUN dnf install -y mingw64-gcc mingw64-freetype mingw64-cairo mingw64-harfbuzz mingw64-pango mingw64-poppler mingw64-gtk3 mingw64-winpthreads-static mingw64-glib2-static gcc boost zip && dnf clean all -y
-USER rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN . ~/.cargo/env && \
     rustup install nightly && \
