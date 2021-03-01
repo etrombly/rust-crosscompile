@@ -14,7 +14,7 @@ done
 mkdir -p package/share/{themes,gtk-3.0}
 cp -r $GTK_INSTALL_PATH/share/glib-2.0/schemas package/share/glib-2.0
 cp -r $GTK_INSTALL_PATH/share/icons package/share/icons
-cp -r ~/Windows10 package/share/themes
+cp -r /home/rust/Windows10 package/share/themes
 
 cat << EOF > package/share/gtk-3.0/settings.ini
 [Settings]
@@ -26,4 +26,4 @@ EOF
 
 mingw-strip package/*
 
-zip -r package.zip package/*
+zip -qr package.zip package/*
