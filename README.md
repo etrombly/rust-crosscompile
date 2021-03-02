@@ -2,7 +2,7 @@
 
 Docker container for cross compiling rust gtk apps to Windows from Linux.
 
-By default will package all required DLLs into a `package.zip` and use the included Windows10 theme.
+By default will package all required DLLs into a `package.zip`.
 
 Typical usage:
 
@@ -10,6 +10,12 @@ Typical usage:
 
     ```
     docker create -v $(pwd):/home/rust/src --name PROJECTNAME-build rust-crosscompile:latest
+    ```
+
+    If you'd like to use the included windows 10 theme create the container like this:
+
+    ```
+    docker create -e WIN_THEME=true -v $(pwd):/home/rust/src --name PROJECTNAME-build rust-crosscompile:latest
     ```
 
 2. Each time you want to build the project, start the Docker container.
