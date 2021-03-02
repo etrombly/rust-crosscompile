@@ -16,8 +16,8 @@ for DLL in $DLLS
     do cp "$DLL" package
 done
 
-mkdir -p package/share/{themes,gtk-3.0}
-cp -r $GTK_INSTALL_PATH/share/glib-2.0/schemas package/share/glib-2.0
+mkdir -p package/share/{themes,gtk-3.0,glib-2.0}
+cp -r $GTK_INSTALL_PATH/share/glib-2.0/schemas package/share/glib-2.0/
 cp -r $GTK_INSTALL_PATH/share/icons package/share/icons
 
 if [ -z "$WIN_THEME" ]
