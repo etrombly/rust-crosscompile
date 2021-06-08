@@ -3,11 +3,6 @@
 source ~/.cargo/env
 cargo build --target=x86_64-pc-windows-gnu --release
 
-if [ -d package ]
-then
-	rm -rf package
-fi
-
 mkdir -p package
 cp target/x86_64-pc-windows-gnu/release/*.exe package
 
@@ -43,3 +38,4 @@ fi
 find package -maxdepth 1 -type f -exec mingw-strip {} +
 
 zip -qr package.zip package/*
+rm -rf package
